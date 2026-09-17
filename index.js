@@ -110,6 +110,14 @@ app.post('/api/register', (req, res) => {
   }
 });
 
+// ---- Usuarios: lista de personas registradas (contactos) ----
+app.get('/api/usuarios', auth, (req, res) => {
+  const filas = db.prepare(
+    'SELECT id, nombre, telefono FROM usuarios WHERE id != ? ORDER BY nombre'
+  ).all(req.usuario.id);
+  res.json(filas);
+});
+
 // ---- Chats: lista de mis conversaciones con el último mensaje ----
 app.get('/api/chats', auth, (req, res) => {
   const filas = db.prepare(`

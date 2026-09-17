@@ -1,0 +1,12 @@
+# Servicio web en el plan gratis de Render para el chat de Sebastian
+services:
+  - type: web
+    name: chat-app-servidor
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: PORT
+        value: 10000
+    healthCheckPath: /api/salud

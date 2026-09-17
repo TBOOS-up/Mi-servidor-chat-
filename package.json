@@ -1,0 +1,1 @@
+{"dependencies":{"better-sqlite3":"^12.2.0","cors":"^2.8.5","express":"^4.19.2","ws":"^8.18.0"},"description":"Servidor del chat estilo WhatsApp de Sebastian: mensajes, estados y senalizacion de llamadas","engines":{"node":">=18"},"license":"UNLICENSED","main":"index.js","name":"chat-app-servidor","scripts":{"start":"node index.js"},"version":"1.0.0"}
